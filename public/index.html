@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-Based C++ Compiler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Web-Based C++ Compiler</h1>
+        
+        <div class="editor-container">
+            <textarea id="code-editor" placeholder="Enter your C++ code here...">#include &lt;iostream&gt;
+
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}</textarea>
+        </div>
+        
+        <div class="controls">
+            <button id="compile-btn">Compile & Run</button>
+            <select id="compiler-version">
+                <option value="g++">g++</option>
+                <option value="clang++">clang++</option>
+            </select>
+        </div>
+        
+        <div class="output-container">
+            <h3>Output:</h3>
+            <pre id="output"></pre>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
