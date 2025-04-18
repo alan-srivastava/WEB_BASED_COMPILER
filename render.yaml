@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: cpp-compiler-backend
+    runtime: node
+    buildCommand: |
+      sudo apt-get update
+      sudo apt-get install -y g++
+      npm install
+    startCommand: node src/server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
