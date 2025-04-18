@@ -29,3 +29,8 @@ document.getElementById('compile-btn').addEventListener('click', async () => {
             </span>`;
     }
 });
+fetch('https://cpp-compiler-backend.onrender.com/compile', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ code: yourCode })
+  });
